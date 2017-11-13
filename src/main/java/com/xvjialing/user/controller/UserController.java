@@ -44,7 +44,6 @@ public class UserController {
             loginReturn.setUser(userRepository.save(user));
             return loginReturn;
         }
-
-
+        
     }
 }
