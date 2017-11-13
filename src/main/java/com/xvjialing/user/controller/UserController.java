@@ -41,7 +41,7 @@ public class UserController {
             user.setPassword(password);
             loginReturn.setStatus(true);
             loginReturn.setMsg("注册成功");
-            loginReturn.setUser(user);
+            loginReturn.setUser(userRepository.save(user));
             return loginReturn;
         }
 
