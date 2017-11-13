@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://45.77.159.109:3336/lightcontrol
+    username: root
+    password: 123456789
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
