@@ -2,6 +2,6 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:mysql://45.77.159.109:3336/lightcontrol
+    url: jdbc:mysql://localhost:3306/lightcontrol
     username: root
     password: 123456789
