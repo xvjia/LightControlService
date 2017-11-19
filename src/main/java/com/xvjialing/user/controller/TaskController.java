@@ -74,8 +74,11 @@ public class TaskController {
         task.setHour(hour);
         task.setMinute(minute);
         task.setTag(tag);
+        Task save = taskRepository.save(task);
 
-        return taskRepository.save(task);
+        getTasks();
+
+        return save;
     }
 
     @ApiOperation(value = "删除定时任务")
