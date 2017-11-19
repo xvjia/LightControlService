@@ -1,5 +1,6 @@
 package com.xvjialing.user.controller;
 
+import com.xvjialing.user.domain.Empty;
 import com.xvjialing.user.domain.Task;
 import com.xvjialing.user.repository.TaskRepository;
 import io.swagger.annotations.*;
@@ -84,9 +85,11 @@ public class TaskController {
     @ApiOperation(value = "删除定时任务")
     @ApiImplicitParam(name = "id", value = "定时任务ID", required = true, dataType = "int" ,paramType = "path")
     @DeleteMapping(value = "/tasks/{id}",produces = "application/json")
-    public void deleteTask(@PathVariable("id") int id){
+    public Empty deleteTask(@PathVariable("id") int id){
         taskRepository.delete(id);
         getTasks();
+
+        return new Empty();
     }
 
     public void getTasks(){
